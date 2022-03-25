@@ -1,5 +1,5 @@
 .watch-bg {
-	min-height: 200px;
+	min-height: 300px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -26,13 +26,6 @@
 	width: 100%;
 	height: 4px;
 	background: #9ce300;
-  }
-  .section-title::after {
-	/*! background: green; */
-	/*! z-index: 999; */
-	/*! width: 200px; */
-	/*! border-left: 21px solid #E5FFC3; */
-	/*! border-right: 21px solid #E5FFC3; */
   }
   .sub-title {
 	font-size: 25px;

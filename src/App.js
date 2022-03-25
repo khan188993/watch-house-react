@@ -76,7 +76,7 @@ function App() {
                 <div className="container">
                     <SectionTitle/>
                     <div className="row">
-                        <div className="col-lg-9 col-md-8 col-sm-12 col-12">
+                        <div className="col-lg-9 col-md-8 col-sm-12 col-12 order-md-first order-last">
                             <div className="watch-products-wrapper">
                                 <SubTitle title="Pick Your Best One"/>
 
@@ -95,7 +95,7 @@ function App() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-4 col-sm-12 col-12">
+                        <div className="col-lg-3 col-md-4 col-sm-12 col-12 order-md-last order-first">
                             <SelectedWatch
                                 selectedWatches={selectedWatches}
                                 removeSelectedWatch={removeSelectedWatch}
