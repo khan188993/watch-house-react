@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+.watch-bg {
+	min-height: 200px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-color: gray;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.watches-box {
+	padding: 70px 0;
+	background: #E5FFC3;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .section-title h1 {
+	font-weight: 700;
   }
-  to {
-    transform: rotate(360deg);
+  .section-title {
+	position: relative;
   }
-}
+  .section-title::before, .section-title::after {
+	content: "";
+	position: absolute;
+	bottom: -21px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	height: 4px;
+	background: #9ce300;
+  }
+  .section-title::after {
+	/*! background: green; */
+	/*! z-index: 999; */
+	/*! width: 200px; */
+	/*! border-left: 21px solid #E5FFC3; */
+	/*! border-right: 21px solid #E5FFC3; */
+  }
+  .sub-title {
+	font-size: 25px;
+	font-weight: 600;
+	margin-bottom: 40px;
+	margin-top: 60px;
+  }
+  .single-watch-product {
+	position: relative;
+	min-height: 474px;
+	overflow: hidden;
+	margin-bottom: 35px;
+  }
+  .add-to-cart {
+	position: absolute;
+	right: 3px;
+	top: 10px;
+	transform: translateX(149px);
+	transition: .3s;
+	opacity: 0;
+  }
+  .single-watch-product:hover .add-to-cart {
+	transform: translateX(0px);
+	opacity: 1;
+  }
+  .single-watch-product .content {
+	background: #8BC53F;
+	padding: 13px 13px;
+  }
+  .single-watch-product .content h2 {
+	font-size: 25px;
+	font-weight: 600;
+  }
+  .content {
+  }
+  .single-watch-product .content span {
+	color: white;
+	background: red;
+	display: inline-block;
+	padding: 7px 21px;
+	font-weight: 600;
+  }
+
+  
+.add-to-cart span {
+	padding-right: 10px;
+  }
+  .single-selected-watch {
+	margin-bottom: 20px;
+  }
+  .single-selected-watch button {
+	display: inline-block;
+	margin-left: 30px;
+	padding: 6px;
+	border: 1px solid black;
+  }
+
+  
+.single-selected-watch span {
+	font-weight: 600;
+  }
+  .selected-watches-buttons {
+	display: flex;
+	flex-direction: column;
+  }
+  .selected-watches-buttons button {
+	margin-bottom: 18px;
+	padding: 20px;
+	text-transform: uppercase;
+  }
+  .selected-watches-buttons button:first-child {
+	background: #8BC53F;
+	border-color: #8BC53F;
+  }
