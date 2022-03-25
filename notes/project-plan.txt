@@ -1,0 +1,13 @@
+Project Plan 
+------------------------
+*)watchHouse.js er bitor data rakhbo and sei mile theke array of object niye data show kre dibo watches state e,,
+*)fakedata te thakbe, = title,id,images,price ,cart and cart icon,
+*)watches array theke loop kore data gulo watch e pass kore dibo and show krbo key check krbo,
+*)add to cart e click krle sei product ta param hisebe handleCart e pass kore setCart e diye dibo,
+*)je product already cart e ase seta abr add krte caile error show krbo, cart theke find id,
+*)cart theke product gulo loop krbo img,title,delete e id thakbe,
+*)id delete e click krle (filter kore delete kore dibo,)
+*)choose one for me te click krle ekta function run krbo,and random select krbo, cart e product na rekhe click krle pop up show krbe,
+*)clear cart e click e all cart array clear hobe,
+*)question component banabo,
+

@@ -1,0 +1,35 @@
+*)lucky one repo - download,
+*)link private repo te click kore, ager moto submit krbo,
+*)support lagle dibe,
+
+===============
+*)different kichu korte hobe, lucky winner,
+*)(mobile,book,zuta,watch,watch house)
+*)chobir upor kono marks nai,
+*)fakeData.json diye img load krbo, array,direct load,
+*)9-12 show krte hobe, fake data,
+*)loop kore show krte hobe,
+*)cart e icon use krbo, (bootstrap use krbo,9,3,-8,4,12,12,)
+*)responsive banate hobe,(mobile,desktop)
+
+functionality, = addtocart click krle (cart e name , pic(optional),delete,optional)
+
+*)choose one for me, (items theke random ekta select krbe, 1ta theke array length porjonto,)
+
+*)folder structure,component name meaning full,component banate hobe,
+
+bonus marks: 
+destructure use krte hobe,
+*)6 ta commit,
+*)readme file edit kore name thik moto dite hobe,(name,livelink,project description optional)
+*)choose again, clear krbe cart, 
+*)bonus er 3ta part, webstie er niche (1,2 component add kore 3ta question ans krbo 2ta,)
+*)how react work,props(read only) vs state(change krte pari,3)use state works, ),
+
+optional:
+delete cart button e click krle delete(filter krte hobe,) hobe,
+*)jeta ekbar cart e add kora ase ta abr click krle add hobe na and alert dibo,
+*)4ta add korle 4tar beshi add korte parbo na alert dibe, 
+
+
+
