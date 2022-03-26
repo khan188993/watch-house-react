@@ -75,13 +75,16 @@
   }
   .single-selected-watch {
 	margin-bottom: 20px;
-  }
-  .single-selected-watch button {
+	position: relative;
+}
+.single-selected-watch button {
 	display: inline-block;
-	margin-left: 30px;
+	position: absolute;
+	right: 0;
+	top:4px;
 	padding: 6px;
 	border: 1px solid black;
-  }
+}
 
   
 .single-selected-watch span {
@@ -100,3 +103,22 @@
 	background: #8BC53F;
 	border-color: #8BC53F;
   }
+
+  .single-question h1 {
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 18px;
+	color: red;
+	margin-top: 30px;
+}
+
+.SingleSelectedWatchImg{
+    width:50px;
+    height: 50px;
+}
+.modal-watch-img img {
+    width: 196px;
+}
+.modal-header {
+    flex-direction: column;
+}

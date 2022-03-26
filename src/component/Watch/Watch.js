@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
 const Watch = (props) => {
-    const {watch,AddingSelectedWatch,clearSelectedWatch} = props;
-    const {name,price,desc,img,id} = watch;
+    const {watch,AddingSelectedWatch} = props;
+    const {name,price,desc,img} = watch;
     return (
         <div className="col-lg-4 col-md-6 col-12">
             <div className="single-watch-product">
                 <div className="add-to-cart  btn btn-success" onClick={()=>AddingSelectedWatch(watch)}>
-                    <span>ADD To Cart</span>
+                    <span>Select</span>
                     <FontAwesomeIcon icon={faCartShopping} />
                 </div>
                 <div
@@ -19,12 +19,11 @@ const Watch = (props) => {
                     }}
                 ></div>
                 <div className="content">
-                    <h2 className="title">Rolex Smooth TH</h2>
+                    <h2 className="title">{name}</h2>
                     <p>
-                        Buy the best watch from our shop.find a watch you never
-                        before.
+                        {desc}
                     </p>
-                    <span>Price: 3000</span>
+                    <span>Price: {price}</span>
                 </div>
             </div>
         </div>

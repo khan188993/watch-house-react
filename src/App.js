@@ -1,23 +1,19 @@
 import "./App.css";
 import React, { useState } from "react";
 import watches from "./fakeData/watches";
-import Watch from "./component/Watches/Watch/Watch";
+import Watch from "./component/Watch/Watch";
 import SelectedWatch from "./component/SelectedWatch/SelectedWatch";
 import Modal from "./component/Modal/Modal";
 import SectionTitle from "./component/SectionTitle/SectionTitle";
 import SubTitle from "./component/SubTitle/SubTitle";
 import Warning from "./component/Warning/Warning";
+import Questions from "./component/Questions/Questions";
 
 function App() {
     const [selectedWatches, setSelectedWatches] = useState([]);
     const [randomWatch, setRandomWatch] = useState("");
-    const [warning,setWarning] = useState({state:false,message:"hello"});
+    const [warning,setWarning] = useState({state:false,message:""});
 
-    
-    //alertMessage create
-    // const alertMessage = () => {
-    //   console.log('alert message')
-    // }
 
     //Adding Product To cart
     const AddingSelectedWatch = (selectedWatch) => {
@@ -28,15 +24,15 @@ function App() {
             if (!exists) {
                 let newSelected = [...selectedWatches, selectedWatch];
                 setSelectedWatches(newSelected);
-                // clearing Waring 
+                // clearing Warning 
                  warning.state && setWarning({state:false,message:""});
             } else {
                 //Adding warning messages
-                setWarning({state:true,message:"Please Select an Unique Value"})
+                setWarning({state:true,message:"Please select an unique value!"})
             }
         } else {
             //Adding warning messages
-            setWarning({state:true,message:"Max 4 items can be added"})
+            setWarning({state:true,message:"Only 4 maximum items can be added!"})
         }
     };
 
@@ -48,6 +44,8 @@ function App() {
             (watch) => watch.id !== id
         );
         setSelectedWatches(restSelectedWatch);
+        // clearing Warning 
+        warning.state && setWarning({state:false,message:""});
     };
 
     //Clear all Selected Items;
@@ -60,12 +58,12 @@ function App() {
         if (selectedWatches.length > 0) {
             let randomId = getRandomId(0, selectedWatches.length - 1);
             setRandomWatch(selectedWatches[randomId]);
-            // clearing Waring 
+            // clearing Warning 
             warning.state && setWarning({state:false,message:""});
         } else {
             // alert("please select some items");
             setRandomWatch("");
-            setWarning({state:true,message:'please select some items'})
+            setWarning({state:true,message:'Please select some item first!'})
         }
     };
 
@@ -80,13 +78,14 @@ function App() {
 
     return (
         <>
+            {/* <Modal showing */}
             {
               selectedWatches.length>0 && <Modal randomWatch={randomWatch}/>
             }
-            {/* Layout Component */}
+
             <section className="watches-box">
                 <div className="container">
-                    <SectionTitle/>
+                    <SectionTitle title="Watch HOUSE" desc="Choose the best watch for yourself."/>
                     <div className="row">
                         <div className="col-lg-9 col-md-8 col-sm-12 col-12 order-md-first order-last">
                             <div className="watch-products-wrapper">
@@ -117,8 +116,12 @@ function App() {
                             />
                         </div>
                     </div>
+                    
+                    {/* question section  */}
+                    <Questions/>
                 </div>
             </section>
+           
         </>
     );
 }

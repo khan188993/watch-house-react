@@ -6,7 +6,7 @@ const SelectedWatch = ({selectedWatches,removeSelectedWatch,clearSelectedWatch,r
 
     return (
         <div className="selected-watches">
-            <SubTitle title="Selected Watches"/> 
+            <SubTitle title="Selected Watch"/> 
             <div className="selected-watches-wrapper">
                 {
                     selectedWatches.length >0 && selectedWatches.map((watch)=><SingleSelectedWatch key={watch.id} watch={watch} removeSelectedWatch={removeSelectedWatch}/>)
