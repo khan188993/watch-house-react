@@ -4,13 +4,14 @@ import watches from "./fakeData/watches";
 import Watch from "./component/Watches/Watch/Watch";
 import SelectedWatch from "./component/SelectedWatch/SelectedWatch";
 import Modal from "./component/Modal/Modal";
-import Header from "./component/Header/Header";
 import SectionTitle from "./component/SectionTitle/SectionTitle";
 import SubTitle from "./component/SubTitle/SubTitle";
+import Warning from "./component/Warning/Warning";
 
 function App() {
     const [selectedWatches, setSelectedWatches] = useState([]);
     const [randomWatch, setRandomWatch] = useState("");
+    const [warning,setWarning] = useState({state:false,message:"hello"});
 
     
     //alertMessage create
@@ -27,11 +28,15 @@ function App() {
             if (!exists) {
                 let newSelected = [...selectedWatches, selectedWatch];
                 setSelectedWatches(newSelected);
+                // clearing Waring 
+                 warning.state && setWarning({state:false,message:""});
             } else {
-                alert("Please Select an Unique Value");
+                //Adding warning messages
+                setWarning({state:true,message:"Please Select an Unique Value"})
             }
         } else {
-            alert("Max 4 items can be added");
+            //Adding warning messages
+            setWarning({state:true,message:"Max 4 items can be added"})
         }
     };
 
@@ -55,15 +60,22 @@ function App() {
         if (selectedWatches.length > 0) {
             let randomId = getRandomId(0, selectedWatches.length - 1);
             setRandomWatch(selectedWatches[randomId]);
+            // clearing Waring 
+            warning.state && setWarning({state:false,message:""});
         } else {
-            alert("please select some items");
+            // alert("please select some items");
             setRandomWatch("");
+            setWarning({state:true,message:'please select some items'})
         }
     };
 
     //Random Id Generated
     function getRandomId(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    const closeWarning = () =>{
+        setWarning({state:false,message:""})
     }
 
     return (
@@ -78,8 +90,9 @@ function App() {
                     <div className="row">
                         <div className="col-lg-9 col-md-8 col-sm-12 col-12 order-md-first order-last">
                             <div className="watch-products-wrapper">
-                                <SubTitle title="Pick Your Best One"/>
 
+                                <SubTitle title="Pick Your Best One"/>
+                                {warning.state && <Warning closeWarning={closeWarning} message={warning.message}/>}
 
                                 <div className="row">
                                     {watches.length > 0 &&

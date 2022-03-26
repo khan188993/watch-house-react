@@ -1,8 +1,8 @@
 import React from "react";
 import './Modal.css'
 
-const Modal = ({randomWatch}) => {
-    const {img,name,price,desc} = randomWatch;
+const Modal = (props) => {
+    const {img,name,price,desc} = props.randomWatch;
     
     return (
         <div
